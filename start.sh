@@ -17,6 +17,7 @@ cat "$PERSISTENT_CONF" > "$TEMP_CONF"
 echo "port=${TCP_PORT}" >> "$TEMP_CONF"
 echo "friendly_name=${FRIENDLY_NAME}" >> "$TEMP_CONF"
 echo "serial=${SERIAL}" >> "$TEMP_CONF"
+echo "root_container=${ROOT_CONTAINER}" >> "$TEMP_CONF"
 
 # All media dirs
 if [[ ! -z "${ALL_MEDIA_DIR1}" ]]; then
@@ -166,6 +167,10 @@ if [[ ! -z "${PICTURES_DIR9}" ]]; then
   echo "media_dir=P,${PICTURES_DIR9}" >> "$TEMP_CONF"
 fi
 
+## Misc. environment variables
+if [[ ! -z "${ROOT_CONTAINER}" ]]; then
+  echo "root_container=${ROOT_CONTAINER}" >> "$TEMP_CONF"
+fi
 
 ## Sometimes PID file can exist after restart. Cleaning.
 if [[ -f "$PID_FILE" ]]; then
