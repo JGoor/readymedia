@@ -26,6 +26,7 @@ You can configure the container using the following environment variables:
 | `VIDEO_DIR[1-9]`  | Path to a directory containing video files  |  |
 | `AUDIO_DIR[1-9]`  | Path to a directory containing audio files  |  |
 | `PICTURES_DIR[1-9]`  | Path to a directory containing picture files  |  |
+| `ROOT_CONTAINER`  | "B": Browse Directory, "M": Music, "P": Pictures, "V": Video | "." |
 
 ## Supported Architectures
 
